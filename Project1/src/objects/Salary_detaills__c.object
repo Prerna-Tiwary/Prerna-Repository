@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Bank_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Account Number</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Details</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Basic__c</fullName>
+        <externalId>false</externalId>
+        <label>Basic</label>
+        <precision>12</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CVV_number__c</fullName>
+        <externalId>false</externalId>
+        <label>CVV number</label>
+        <length>16</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>lastFour</maskType>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Credited_to__c</fullName>
+        <externalId>false</externalId>
+        <label>Credited to</label>
+        <referenceTo>Employee__c</referenceTo>
+        <relationshipLabel>Salary detaills</relationshipLabel>
+        <relationshipName>Salary_detaills</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Gross_salary__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_earnings__c  -  PF_deduction__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gross salary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRA__c</fullName>
+        <externalId>false</externalId>
+        <label>HRA</label>
+        <precision>12</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mode_of_Payment__c</fullName>
+        <description>Different modes of payment</description>
+        <externalId>false</externalId>
+        <label>Mode of Payment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>RTGS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEFT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PF_deduction__c</fullName>
+        <externalId>false</externalId>
+        <label>PF deduction</label>
+        <precision>12</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Salary_Credit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Salary Credit Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Special_aalowance__c</fullName>
+        <externalId>false</externalId>
+        <label>Special aalowance</label>
+        <precision>12</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_earnings__c</fullName>
+        <description>Total earnings</description>
+        <externalId>false</externalId>
+        <formula>Basic__c  +  HRA__c  +  Special_aalowance__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total earnings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Salary detaill</label>
+    <nameField>
+        <displayFormat>SAL-{000000}</displayFormat>
+        <label>Salary details ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Salary detaills</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>VAL</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Credited_to__r.Is_Active__c  == False,TRUE,FALSE)</errorConditionFormula>
+        <errorMessage>No generation of salary for inactive employees</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAL1</fullName>
+        <active>true</active>
+        <description>The entered bank details is invalid.</description>
+        <errorConditionFormula>IF( 
+ LEN( Bank_Account_Number__c) == 0||  LEN(Bank_Details__c) == 0,TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Bank_Account_Number__c</errorDisplayField>
+        <errorMessage>The entered bank details are invalid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAL2</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+  LEN( Bank_Account_Number__c)  &gt; 16|| LEN(  Bank_Account_Number__c) &lt; 16,
+TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Bank_Account_Number__c</errorDisplayField>
+        <errorMessage>Invalid account number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAL5</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+  LEN( Bank_Account_Number__c)  &gt; 16|| LEN(  Bank_Account_Number__c) &lt; 16,
+TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Bank_Account_Number__c</errorDisplayField>
+        <errorMessage>Invalid account number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VALDA1</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(
+  ISCHANGED(Bank_Details__c ) ||  ISCHANGED( Bank_Details__c ),TRUE,FALSE 
+
+
+
+)</errorConditionFormula>
+        <errorDisplayField>Bank_Details__c</errorDisplayField>
+        <errorMessage>No updation allowed</errorMessage>
+    </validationRules>
+</CustomObject>

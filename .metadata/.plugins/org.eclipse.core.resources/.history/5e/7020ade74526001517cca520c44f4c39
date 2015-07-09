@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Expiry_Of_Project</fullName>
+        <ccEmails>prerna.tiwary@eternussolutions.com</ccEmails>
+        <ccEmails>tiwaryprerna419@gmail.com</ccEmails>
+        <description>Expiry Of Project</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportCaseAssignmentNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Expiry_Of_Project2</fullName>
+        <description>Expiry Of Project2</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportCaseResponse</template>
+    </alerts>
+    <alerts>
+        <fullName>Expiry_Project</fullName>
+        <description>Expiry Project</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportEscalatedCaseNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Expiry_Project12</fullName>
+        <description>Expiry Project12</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SalesNewCustomerEmail</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Project</fullName>
+        <description>New Project</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SalesNewCustomerEmail</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Project1</fullName>
+        <ccEmails>tiwaryprerna419@gmail.com</ccEmails>
+        <description>New Project1</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SalesNewCustomerEmail</template>
+    </alerts>
+    <alerts>
+        <fullName>Project_Closed</fullName>
+        <description>Project Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportEscalatedCaseNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Project_Expiry</fullName>
+        <description>Project Expiry</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/MarketingProductInquiryResponse</template>
+    </alerts>
+    <alerts>
+        <fullName>Project_ExpiryA</fullName>
+        <description>Project ExpiryA</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>prerna.tiwary1@eternussoluions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>prerna.tiwary@eternussolutions.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/MarketingProductInquiryResponse</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Expire_Project</fullName>
+        <field>End_Date__c</field>
+        <name>Expire Project</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Project_Closed</fullName>
+        <field>End_Date__c</field>
+        <formula>End_Date__c</formula>
+        <name>Project Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Project_Closed1</fullName>
+        <field>Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>Project Closed1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>New Project</fullName>
+        <actions>
+            <name>New_Project</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>New Project</description>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Expire</fullName>
+        <active>true</active>
+        <description>Project Expire</description>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Project_ExpiryA</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Project_Details__c.End_Date__c</offsetFromField>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Rule 4</fullName>
+        <active>false</active>
+        <description>The project is going to expire after 5 days.</description>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Project_Details__c.End_Date__c</offsetFromField>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Rule3</fullName>
+        <actions>
+            <name>Project_Closed1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Project_Details__c.End_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>The project is closed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Project_Details__c.End_Date__c</offsetFromField>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>New_Project</fullName>
+        <assignedTo>prerna.tiwary@eternussolutions.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Client__c.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>New Project</subject>
+    </tasks>
+</Workflow>
